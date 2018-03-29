@@ -6,12 +6,8 @@
 using CppAD::AD;
 
 // TODO: Set the timestep length and duration
-size_t N = 20;
-double dt = 0.05;
-
-// Use this to model the latency in the actuation values. Contraint the optimization to not
-// change these values.
-constexpr int kImmutableTimeSteps = 2;
+size_t N = 10;
+double dt = 0.1;
 
 // This value assumes the model presented in the classroom is used.
 //
@@ -27,8 +23,7 @@ const double Lf = 2.67;
 
 // NOTE: feel free to play around with this
 // or do something completely different
-double ref_v = 40;
-
+double ref_v = 15;  // meters/s
 
 size_t x_start = 0;
 size_t y_start = x_start + N;
@@ -51,14 +46,15 @@ class FG_eval {
     // Any additions to the cost should be added to `fg[0]`.
     fg[0] = 0;
 
-    constexpr int kCteFactor = 200;
-    constexpr int kEpsiFactor = 200;
+    constexpr int kCteFactor = 2000;
+    constexpr int kEpsiFactor = 2000;
     constexpr int kSpeedFactor = 1;
-    constexpr int kDeltaStartFactor = 5;
+    constexpr int kDeltaStartFactor = 50;
     constexpr int kAccelFactor = 10;
 
-    constexpr int kSteeringRateFactor = 20;
+    constexpr int kSteeringRateFactor = 10000;
     constexpr int kAccelRateFactor = 10;
+    constexpr int kSteeringRateRateFactor = 2500;
 
     // The part of the cost based on the reference state.
     for (int t = 0; t < N; t++) {
@@ -75,9 +71,21 @@ class FG_eval {
 
     // Minimize the value gap between sequential actuations.
     for (int t = 0; t < N - 2; t++) {
-      fg[0] += kSteeringRateFactor * CppAD::pow(vars[delta_start + t + 1] - vars[delta_start + t], 2);
-      fg[0] += kAccelRateFactor * CppAD::pow(vars[a_start + t + 1] - vars[a_start + t], 2);
+      fg[0] += kSteeringRateFactor * vars[v_start + t] *
+               CppAD::pow(vars[delta_start + t + 1] - vars[delta_start + t], 2);
+      fg[0] += kAccelRateFactor *
+               CppAD::pow(vars[a_start + t + 1] - vars[a_start + t], 2);
     }
+
+    // Add a cost to the 2nd order derivative of the steering angle.
+    for (int t = 0; t < N - 3; t++) {
+      fg[0] +=
+          vars[v_start + t] * kSteeringRateRateFactor *
+          CppAD::pow((vars[delta_start + t + 2] - vars[delta_start + t + 1]) -
+                         (vars[delta_start + t + 1] - vars[delta_start + t]),
+                     2);
+    }
+
     std::cout << "COST" << fg[0] << std::endl;
     //
     // Setup Constraints
@@ -117,7 +125,8 @@ class FG_eval {
       AD<double> a0 = vars[a_start + t - 1];
 
       AD<double> f0 = coeffs[0] + coeffs[1] * x0;
-      AD<double> psides0 = CppAD::atan(coeffs[1]);
+      AD<double> psides0 = CppAD::atan(coeffs[1] + 2 * x0 * coeffs[2] +
+                                       3 * coeffs[3] * pow(x0, 2));
 
       // Here's `x` to get you started.
       // The idea here is to constraint this value to be 0.
@@ -190,25 +199,12 @@ vector<double> MPC::Solve(Eigen::VectorXd x0, Eigen::VectorXd coeffs) {
     vars_upperbound[i] = 1.0e19;
   }
 
-  // The upper and lower limits of delta are set to -25 and 25
-  // degrees (values in radians).
-  for (int i = delta_start; i < delta_start + kImmutableTimeSteps; i++) {
-    vars_lowerbound[i] = initial_steering_angle;
-    vars_upperbound[i] = initial_steering_angle;
-  }
-
-  for (int i = delta_start + kImmutableTimeSteps; i < a_start; i++) {
+  for (int i = delta_start; i < a_start; i++) {
     vars_lowerbound[i] = -0.436332;
     vars_upperbound[i] = 0.436332;
   }
 
-  // Acceleration/decceleration upper and lower limits.
-  for (int i = a_start; i < a_start + kImmutableTimeSteps; i++) {
-    vars_lowerbound[i] = initial_accel;
-    vars_upperbound[i] = initial_accel;
-  }
-
-  for (int i = a_start + kImmutableTimeSteps; i < n_vars; i++) {
+  for (int i = a_start; i < n_vars; i++) {
     vars_lowerbound[i] = -1.0;
     vars_upperbound[i] = 1.0;
   }
@@ -241,7 +237,7 @@ vector<double> MPC::Solve(Eigen::VectorXd x0, Eigen::VectorXd coeffs) {
 
   // options
   std::string options;
-  options += "Integer print_level 3\n";
+  options += "Integer print_level 1\n";
   options += "Sparse  true        forward\n";
   options += "Sparse  true        reverse\n";
 
@@ -264,11 +260,11 @@ vector<double> MPC::Solve(Eigen::VectorXd x0, Eigen::VectorXd coeffs) {
 
   vector<double> result;
   // This selects the predicted actuator controls at the first mutable point.
-  result.push_back(solution.x[delta_start + kImmutableTimeSteps]);
-  result.push_back(solution.x[a_start + kImmutableTimeSteps]);
-  for (int i = 0; i < N-1;i++) {
-    result.push_back(solution.x[x_start +i + 1]);
-    result.push_back(solution.x[y_start +i + 1]);
+  result.push_back(solution.x[delta_start]);
+  result.push_back(solution.x[a_start]);
+  for (int i = 0; i < N - 1; i++) {
+    result.push_back(solution.x[x_start + i + 1]);
+    result.push_back(solution.x[y_start + i + 1]);
   }
   return result;
 }

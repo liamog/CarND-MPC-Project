@@ -104,8 +104,11 @@ int main() {
           double py = j[1]["y"];
           double psi = j[1]["psi"];
           double v = j[1]["speed"];
+          // Convert to m/s
+          v =  (v * 1609.34) / 3600;
           double a = j[1]["throttle"];
           double steering_angle_rads = j[1]["steering_angle"];
+          steering_angle_rads *= -1.0;
 
           // Display the waypoints/reference line
           vector<double> waypoint_x_vals;
@@ -130,22 +133,46 @@ int main() {
             fitted_next_x_vals.push_back(dd);
             fitted_next_y_vals.push_back(polyeval(coeffs, dd));
           }
+
+          constexpr int kLatencyMilliseconds = 100;
+          constexpr double kLatencySeconds = 0.1;
+          constexpr double Lf = 2.67;
+          double future_psi = v * (steering_angle_rads / Lf) * kLatencySeconds;
+          // Calculate the future state of the vehicle before running prediction.
+          double future_x = v * std::cos(future_psi / 2) * kLatencySeconds;
+          double future_y = v * std::sin(future_psi / 2) * kLatencySeconds;
+          double future_v = v + a * kLatencySeconds;
+
+          double future_cte = polyeval(coeffs, future_x);
+          double future_etsi = future_psi - atan(coeffs[1] + 2 * future_x * coeffs[2] +
+                                          3 * coeffs[3] * pow(future_x, 2));
           double cte = polyeval(coeffs, 0);
           double etsi = -atan(coeffs[1]);
 
-          Eigen::VectorXd state(8);
+          std::cout << "x=" << future_x
+              << ",y=" << future_y
+              << ",v=" << future_v
+              << ",psi=" << future_psi
+              << ",cte=" << future_cte
+              << ",etsi=" << future_etsi << std::endl;
 
-          state << 0, 0, 0, v, cte, etsi, a, steering_angle_rads;
 
-          vector<double> solution = mpc.Solve(state, coeffs);
+//          Eigen::VectorXd state(8);
+//          state << 0,0,0,v,cte,etsi,a,steering_angle_rads;
+
+          Eigen::VectorXd future_state(8);
+
+          future_state << future_x, future_y, future_psi, future_v, cte, etsi, a,
+              steering_angle_rads;
+
+          vector<double> solution = mpc.Solve(future_state, coeffs);
 
           /*
-           * TODO: Calculate steering angle and throttle using MPC.
-           *
-           * Both are in between [-1, 1].
-           *
+           * Both steering and throttle are in between [-1, 1].
            */
           double steer_value = -solution[0];
+          double steer_value_norm = steer_value / deg2rad(25);
+
           double throttle_value = solution[1];
           // Display the MPC predicted trajectory
           vector<double> mpc_x_vals;
@@ -153,16 +180,18 @@ int main() {
 
           for (int jj = 2; jj < solution.size(); jj += 2) {
             mpc_x_vals.push_back(solution[jj]);
-            mpc_y_vals.push_back(-solution[jj + 1]);
+            mpc_y_vals.push_back(solution[jj + 1]);
           }
 
-          std::cout << steer_value << ":" << throttle_value << std::endl;
+          std::cout << "steering angle command rads(norm)=" << steer_value
+                    << "(" << steer_value_norm << ")|"
+                    << "throttle="<< throttle_value << std::endl;
 
           json msgJson;
           // NOTE: Remember to divide by deg2rad(25) before you send the
           // steering value back. Otherwise the values will be in between
           // [-deg2rad(25), deg2rad(25] instead of [-1, 1].
-          msgJson["steering_angle"] = steer_value;
+          msgJson["steering_angle"] = steer_value_norm;
           msgJson["throttle"] = throttle_value;
 
           //.. add (x,y) points to list here, points are in reference to the
@@ -193,7 +222,7 @@ int main() {
           //
           // NOTE: REMEMBER TO SET THIS TO 100 MILLISECONDS BEFORE
           // SUBMITTING.023
-          this_thread::sleep_for(chrono::milliseconds(100));
+          this_thread::sleep_for(chrono::milliseconds(kLatencyMilliseconds));
           ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
         }
       } else {
