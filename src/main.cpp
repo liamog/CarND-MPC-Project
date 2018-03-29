@@ -104,27 +104,38 @@ int main() {
           double py = j[1]["y"];
           double psi = j[1]["psi"];
           double v = j[1]["speed"];
+          double a = j[1]["throttle"];
+          double steering_angle_rads = j[1]["steering_angle"];
 
           // Display the waypoints/reference line
-          vector<double> next_x_vals;
-          vector<double> next_y_vals;
+          vector<double> waypoint_x_vals;
+          vector<double> waypoint_y_vals;
 
           Eigen::VectorXd ptsx_car_coordinates(ptsx.size());
           Eigen::VectorXd ptsy_car_coordinates(ptsy.size());
-          for (int ii =0 ; ii < ptsx.size(); ii++) {
+          for (int ii = 0; ii < ptsx.size(); ii++) {
             double out_x, out_y;
             MapToCar(px, py, psi, ptsx[ii], ptsy[ii], &out_x, &out_y);
             ptsx_car_coordinates[ii] = out_x;
-            next_x_vals.push_back(out_x);
+            waypoint_x_vals.push_back(out_x);
             ptsy_car_coordinates[ii] = out_y;
-            next_y_vals.push_back(out_y);
+            waypoint_y_vals.push_back(out_y);
           }
-          Eigen::VectorXd coeffs = polyfit(ptsx_car_coordinates, ptsy_car_coordinates, 3);
+          Eigen::VectorXd coeffs =
+              polyfit(ptsx_car_coordinates, ptsy_car_coordinates, 3);
+
+          vector<double> fitted_next_x_vals;
+          vector<double> fitted_next_y_vals;
+          for (double dd = 0; dd < 50.0; dd += 1) {
+            fitted_next_x_vals.push_back(dd);
+            fitted_next_y_vals.push_back(polyeval(coeffs, dd));
+          }
           double cte = polyeval(coeffs, 0);
           double etsi = -atan(coeffs[1]);
 
-          Eigen::VectorXd state(6);
-          state << 0, 0, 0, v, cte, etsi;
+          Eigen::VectorXd state(8);
+
+          state << 0, 0, 0, v, cte, etsi, a, steering_angle_rads;
 
           vector<double> solution = mpc.Solve(state, coeffs);
 
@@ -140,9 +151,9 @@ int main() {
           vector<double> mpc_x_vals;
           vector<double> mpc_y_vals;
 
-          for (int jj=2; jj < solution.size(); jj+=2) {
+          for (int jj = 2; jj < solution.size(); jj += 2) {
             mpc_x_vals.push_back(solution[jj]);
-            mpc_y_vals.push_back(-solution[jj+1]);
+            mpc_y_vals.push_back(-solution[jj + 1]);
           }
 
           std::cout << steer_value << ":" << throttle_value << std::endl;
@@ -154,20 +165,22 @@ int main() {
           msgJson["steering_angle"] = steer_value;
           msgJson["throttle"] = throttle_value;
 
-
           //.. add (x,y) points to list here, points are in reference to the
-          //vehicle's coordinate system
+          // vehicle's coordinate system
           // the points in the simulator are connected by a Green line
 
           msgJson["mpc_x"] = mpc_x_vals;
           msgJson["mpc_y"] = mpc_y_vals;
 
           //.. add (x,y) points to list here, points are in reference to the
-          //vehicle's coordinate system
+          // vehicle's coordinate system
           // the points in the simulator are connected by a Yellow line
 
-          msgJson["next_x"] = next_x_vals;
-          msgJson["next_y"] = next_y_vals;
+          msgJson["next_x"] = fitted_next_x_vals;
+          msgJson["next_y"] = fitted_next_y_vals;
+
+          //          msgJson["next_x"] = waypoint_x_vals;
+          //          msgJson["next_y"] = waypoint_y_vals;
 
           auto msg = "42[\"steer\"," + msgJson.dump() + "]";
           std::cout << msg << std::endl;
@@ -179,7 +192,7 @@ int main() {
           // around the track with 100ms latency.
           //
           // NOTE: REMEMBER TO SET THIS TO 100 MILLISECONDS BEFORE
-          // SUBMITTING.
+          // SUBMITTING.023
           this_thread::sleep_for(chrono::milliseconds(100));
           ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
         }

@@ -6,8 +6,12 @@
 using CppAD::AD;
 
 // TODO: Set the timestep length and duration
-size_t N = 10;
-double dt = 0.1;
+size_t N = 20;
+double dt = 0.05;
+
+// Use this to model the latency in the actuation values. Contraint the optimization to not
+// change these values.
+constexpr int kImmutableTimeSteps = 2;
 
 // This value assumes the model presented in the classroom is used.
 //
@@ -47,29 +51,36 @@ class FG_eval {
     // Any additions to the cost should be added to `fg[0]`.
     fg[0] = 0;
 
+    constexpr int kCteFactor = 200;
+    constexpr int kEpsiFactor = 200;
+    constexpr int kSpeedFactor = 1;
+    constexpr int kDeltaStartFactor = 5;
+    constexpr int kAccelFactor = 10;
+
+    constexpr int kSteeringRateFactor = 20;
+    constexpr int kAccelRateFactor = 10;
+
     // The part of the cost based on the reference state.
     for (int t = 0; t < N; t++) {
-      fg[0] += CppAD::pow(vars[cte_start + t], 2);
-      fg[0] += CppAD::pow(vars[epsi_start + t], 2);
-      fg[0] += CppAD::pow(vars[v_start + t] - ref_v, 2);
+      fg[0] += kCteFactor * CppAD::pow(vars[cte_start + t], 2);
+      fg[0] += kEpsiFactor * CppAD::pow(vars[epsi_start + t], 2);
+      fg[0] += kSpeedFactor * CppAD::pow(vars[v_start + t] - ref_v, 2);
     }
 
     // Minimize the use of actuators.
     for (int t = 0; t < N - 1; t++) {
-      fg[0] += CppAD::pow(vars[delta_start + t], 2);
-      fg[0] += CppAD::pow(vars[a_start + t], 2);
+      fg[0] += kDeltaStartFactor * CppAD::pow(vars[delta_start + t], 2);
+      fg[0] += kAccelFactor * CppAD::pow(vars[a_start + t], 2);
     }
 
     // Minimize the value gap between sequential actuations.
     for (int t = 0; t < N - 2; t++) {
-      fg[0] += CppAD::pow(vars[delta_start + t + 1] - vars[delta_start + t], 2);
-      fg[0] += CppAD::pow(vars[a_start + t + 1] - vars[a_start + t], 2);
+      fg[0] += kSteeringRateFactor * CppAD::pow(vars[delta_start + t + 1] - vars[delta_start + t], 2);
+      fg[0] += kAccelRateFactor * CppAD::pow(vars[a_start + t + 1] - vars[a_start + t], 2);
     }
-
+    std::cout << "COST" << fg[0] << std::endl;
     //
     // Setup Constraints
-    //
-    // NOTE: In this section you'll setup the model constraints.
 
     // Initial constraints
     //
@@ -145,10 +156,12 @@ vector<double> MPC::Solve(Eigen::VectorXd x0, Eigen::VectorXd coeffs) {
   double v = x0[3];
   double cte = x0[4];
   double epsi = x0[5];
+  double initial_accel = x0[6];
+  double initial_steering_angle = x0[7];
 
   // number of independent variables
   // N timesteps == N - 1 actuations
-  size_t n_vars = N * 6 + (N - 1) * 2;
+  size_t n_vars = (N * 6) + ((N - 1) * 2);
   // Number of constraints
   size_t n_constraints = N * 6;
 
@@ -179,15 +192,23 @@ vector<double> MPC::Solve(Eigen::VectorXd x0, Eigen::VectorXd coeffs) {
 
   // The upper and lower limits of delta are set to -25 and 25
   // degrees (values in radians).
-  // NOTE: Feel free to change this to something else.
-  for (int i = delta_start; i < a_start; i++) {
+  for (int i = delta_start; i < delta_start + kImmutableTimeSteps; i++) {
+    vars_lowerbound[i] = initial_steering_angle;
+    vars_upperbound[i] = initial_steering_angle;
+  }
+
+  for (int i = delta_start + kImmutableTimeSteps; i < a_start; i++) {
     vars_lowerbound[i] = -0.436332;
     vars_upperbound[i] = 0.436332;
   }
 
   // Acceleration/decceleration upper and lower limits.
-  // NOTE: Feel free to change this to something else.
-  for (int i = a_start; i < n_vars; i++) {
+  for (int i = a_start; i < a_start + kImmutableTimeSteps; i++) {
+    vars_lowerbound[i] = initial_accel;
+    vars_upperbound[i] = initial_accel;
+  }
+
+  for (int i = a_start + kImmutableTimeSteps; i < n_vars; i++) {
     vars_lowerbound[i] = -1.0;
     vars_upperbound[i] = 1.0;
   }
@@ -220,7 +241,7 @@ vector<double> MPC::Solve(Eigen::VectorXd x0, Eigen::VectorXd coeffs) {
 
   // options
   std::string options;
-  options += "Integer print_level  0\n";
+  options += "Integer print_level 3\n";
   options += "Sparse  true        forward\n";
   options += "Sparse  true        reverse\n";
 
@@ -242,8 +263,9 @@ vector<double> MPC::Solve(Eigen::VectorXd x0, Eigen::VectorXd coeffs) {
   std::cout << "Cost " << cost << std::endl;
 
   vector<double> result;
-  result.push_back(solution.x[delta_start]);
-  result.push_back(solution.x[a_start]);
+  // This selects the predicted actuator controls at the first mutable point.
+  result.push_back(solution.x[delta_start + kImmutableTimeSteps]);
+  result.push_back(solution.x[a_start + kImmutableTimeSteps]);
   for (int i = 0; i < N-1;i++) {
     result.push_back(solution.x[x_start +i + 1]);
     result.push_back(solution.x[y_start +i + 1]);
