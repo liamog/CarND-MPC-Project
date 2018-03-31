@@ -152,8 +152,11 @@ int main() {
 
           // Calculate the future state of the vehicle before running
           // prediction.
-          double future_x = v * std::cos(future_psi) * kLatencySeconds;
-          double future_y = v * std::sin(future_psi) * kLatencySeconds;
+          // Note our motion update model is simplified , psi0 = 0rads, sin = 0
+          // cos = 1. Therefore x is purely the forward motion and the y remains
+          // 0.
+          double future_x = v * kLatencySeconds;
+          double future_y = 0;
           double future_v = v + a * kLatencySeconds;
 
           double future_cte = polyeval(coeffs, future_x);

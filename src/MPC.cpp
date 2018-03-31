@@ -128,8 +128,8 @@ class FG_eval {
       AD<double> psides0 = CppAD::atan(coeffs[1] + 2 * x0 * coeffs[2] +
                                        3 * coeffs[3] * pow(x0, 2));
 
-      // Here's `x` to get you started.
-      // The idea here is to constraint this value to be 0.
+
+      // The idea here is to constrain these values to be 0.
       //
       // Recall the equations for the model:
       // x_[t+1] = x[t] + v[t] * cos(psi[t]) * dt
