@@ -157,6 +157,14 @@ int main() {
           // 0.
           double future_x = v * kLatencySeconds;
           double future_y = 0;
+
+          // Using a more correct model. Using the steering angle and speed.
+          //
+          if (future_psi > 0.0001) {
+            future_x = (v * kLatencySeconds / future_psi) * sin(future_psi);
+            future_y = (v * kLatencySeconds / future_psi) * (1 - cos(future_psi));
+          }
+
           double future_v = v + a * kLatencySeconds;
 
           double future_cte = polyeval(coeffs, future_x);
