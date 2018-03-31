@@ -1,0 +1,1964 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Ca",
+				"CalculateCost"
+			],
+			[
+				"Tra",
+				"TrajectoryPipeline"
+			],
+			[
+				"objec",
+				"object_manager"
+			],
+			[
+				"Curn",
+				"GetCurrentContextDebugNode"
+			],
+			[
+				"override",
+				"overridden"
+			],
+			[
+				"Ijp",
+				"ijp_debug_node"
+			],
+			[
+				"errr",
+				"error_domain"
+			],
+			[
+				"Make",
+				"MakeNestedDebugContext"
+			],
+			[
+				"issue",
+				"issue_list_"
+			],
+			[
+				"issu",
+				"issue_list_"
+			],
+			[
+				"worl",
+				"planner_world_"
+			],
+			[
+				"selected_plann",
+				"selected_planner_task"
+			],
+			[
+				"null",
+				"nullptr"
+			],
+			[
+				"iterat",
+				"iteration_ok"
+			],
+			[
+				"prev_plan",
+				"prev_planner_status_"
+			],
+			[
+				"prev",
+				"previous_planner_status"
+			],
+			[
+				"pre",
+				"previous_planner_status"
+			],
+			[
+				"previoo",
+				"previous_autonomy_state_"
+			],
+			[
+				"way",
+				"waypoint"
+			],
+			[
+				"kM",
+				"kMinSpeed"
+			],
+			[
+				"Publ",
+				"PublishIssues"
+			],
+			[
+				"prep",
+				"prepare_issue_list_"
+			],
+			[
+				"selec",
+				"selected"
+			],
+			[
+				"has_p",
+				"has_plan_error"
+			],
+			[
+				"planner",
+				"planner_output"
+			],
+			[
+				"CAR_CH",
+				"CAR_CHECK_EQ"
+			],
+			[
+				"k",
+				"kPathSeparator"
+			],
+			[
+				"IJP",
+				"IJPItem"
+			],
+			[
+				"ijp",
+				"ijp_traj"
+			],
+			[
+				"trajoe",
+				"trajectories_"
+			],
+			[
+				"filter",
+				"filter_matcher_"
+			],
+			[
+				"maybUpdate",
+				"MaybeUpdateFilterMatch"
+			],
+			[
+				"inclu",
+				"include_data_in_matching_"
+			],
+			[
+				"mode",
+				"model_"
+			],
+			[
+				"math",
+				"matches"
+			],
+			[
+				"sel",
+				"selected_object_"
+			],
+			[
+				"std",
+				"stderr"
+			],
+			[
+				"em",
+				"empty"
+			],
+			[
+				"match",
+				"matching_only"
+			],
+			[
+				"overl",
+				"overlap_region"
+			],
+			[
+				"smot",
+				"smooth_y"
+			],
+			[
+				"plann",
+				"planner_obj"
+			],
+			[
+				"use",
+				"use_uncertainty"
+			],
+			[
+				"agen",
+				"agent_state"
+			],
+			[
+				"BoxF",
+				"BoxFromAgentStateWithUncertainty"
+			],
+			[
+				"ver",
+				"vertical_sd"
+			],
+			[
+				"min_g",
+				"min_gap_time"
+			],
+			[
+				"plan",
+				"planner_obj"
+			],
+			[
+				"watch",
+				"watched_auto_open_paths_"
+			],
+			[
+				"mdoe",
+				"model_"
+			],
+			[
+				"Get",
+				"GetItemFromPath"
+			],
+			[
+				"par",
+				"parent_"
+			],
+			[
+				"auto",
+				"auto_open_paths_"
+			],
+			[
+				"close",
+				"closed_paths_"
+			],
+			[
+				"inva",
+				"Invalidate"
+			],
+			[
+				"Append",
+				"AppendToPathMatcher"
+			],
+			[
+				"App",
+				"AppendToPathMatcher"
+			],
+			[
+				"get",
+				"GetPath"
+			],
+			[
+				"cutt",
+				"cutting_in"
+			],
+			[
+				"MaybeOpen",
+				"MaybeOpenItems"
+			],
+			[
+				"GetChi",
+				"GetChildPath"
+			],
+			[
+				"expand",
+				"expandIndex"
+			],
+			[
+				"open",
+				"open_names_"
+			],
+			[
+				"re2",
+				"RE2"
+			],
+			[
+				"Rem",
+				"RemoveStaleDescendantsWithId"
+			],
+			[
+				"con",
+				"constraint"
+			],
+			[
+				"MOING",
+				"MOVING_AVOID_REGION"
+			],
+			[
+				"pinc",
+				"pinch_point"
+			],
+			[
+				"start",
+				"start_x"
+			],
+			[
+				"tim",
+				"time_index"
+			],
+			[
+				"TimeTo",
+				"TimeIndexToTime"
+			],
+			[
+				"Avoid",
+				"AvoidRegion"
+			],
+			[
+				"clear",
+				"clearance_info"
+			],
+			[
+				"right",
+				"right_neighbor"
+			],
+			[
+				"sing",
+				"signed_lateralgap"
+			],
+			[
+				"traj",
+				"Trajectory"
+			],
+			[
+				"required_",
+				"required_lateral_gap"
+			],
+			[
+				"stati",
+				"static_clearances"
+			],
+			[
+				"constr",
+				"constraint"
+			],
+			[
+				"debug",
+				"debug_data"
+			],
+			[
+				"object",
+				"object_pair"
+			],
+			[
+				"AddAvoid",
+				"AddAvoidRegionForPinchPoint"
+			],
+			[
+				"pinch",
+				"pinch_point_midpoints"
+			],
+			[
+				"mid",
+				"midpoint"
+			],
+			[
+				"spee",
+				"speed_constraints"
+			],
+			[
+				"obj",
+				"object_manager"
+			],
+			[
+				"Object",
+				"ObjectPair"
+			],
+			[
+				"new",
+				"newly_insert_gap"
+			],
+			[
+				"dyn",
+				"dynamic_clearance_gaps"
+			],
+			[
+				"ite",
+				"iterator"
+			],
+			[
+				"OBJ_TOO_FAR",
+				"OBJ_TOO_FAR_FROM_FORK"
+			],
+			[
+				"ap",
+				"approach_start_iwp -> car::planner::InterpolatedWaypoint\t[MEMBER]"
+			],
+			[
+				"right_tu",
+				"right_turn_info -> [ID]"
+			],
+			[
+				"lane",
+				"lane_feature"
+			],
+			[
+				"base",
+				"baseline_overlap"
+			],
+			[
+				"expa",
+				"expand_watched_tree_action"
+			],
+			[
+				"wat",
+				"watched_vars_tree_view_"
+			],
+			[
+				"_selected",
+				"watched_selected_index_ -> [ID]"
+			],
+			[
+				"rig",
+				"right_turn_info"
+			],
+			[
+				"ObjecMa",
+				"ObjectMayTurnRight"
+			],
+			[
+				"ObjectMa",
+				"ObjectMayTurnRight"
+			],
+			[
+				"watched_",
+				"watched_vars_tree_view_"
+			],
+			[
+				"Conn",
+				"ConnectProxyModel"
+			],
+			[
+				"proj",
+				"projection_interval"
+			],
+			[
+				"lef",
+				"left_lane_width"
+			],
+			[
+				"has_right",
+				"has_valid_right_lane_width"
+			],
+			[
+				"asso",
+				"assoc_to_our_lane_"
+			],
+			[
+				"string",
+				"stringstream"
+			],
+			[
+				"right_tur",
+				"right_turn_info"
+			],
+			[
+				"CAR_CHECK",
+				"CAR_CHECK_NOTNULL"
+			],
+			[
+				"exp",
+				"excluded_group"
+			],
+			[
+				"CAR_DCHEC",
+				"CAR_DCHECK_NOTNULL -> [ID]"
+			],
+			[
+				"inv",
+				"invalidateFilter"
+			],
+			[
+				"IsRight",
+				"IsRightTurnLane( car::roadgraph::MiniFeatureId fid, const car::roadgraph::RoadGraph &rg ) -> bool\t[FUNCTION]"
+			],
+			[
+				"roga",
+				"roadgraph"
+			],
+			[
+				"may",
+				"may_turn_right"
+			],
+			[
+				"vali",
+				"isValid"
+			],
+			[
+				"selected",
+				"selected_object"
+			],
+			[
+				"Va",
+				"Variables"
+			],
+			[
+				"watched",
+				"watched_vars_layout"
+			],
+			[
+				"wath",
+				"watched_selected_index_"
+			],
+			[
+				"add",
+				"addWidget"
+			],
+			[
+				"extra",
+				"extra_debug"
+			],
+			[
+				"extr",
+				"extra_debug_arg"
+			],
+			[
+				"room",
+				"room_to_pass_on_right_"
+			],
+			[
+				"appro",
+				"approaching_turn"
+			],
+			[
+				"invalidate",
+				"invalidateFilter"
+			],
+			[
+				"watce",
+				"watched_vars_tree_view_"
+			]
+		]
+	},
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Build",
+					""
+				],
+				[
+					"Packages/google-Blaze/Blaze.sublime-build",
+					""
+				],
+				[
+					"Packages/google-Blaze/Blaze.sublime-build",
+					"Run Tests"
+				],
+				[
+					"Packages/google-Blaze/Blaze.sublime-build",
+					"Run Modified Tests"
+				],
+				[
+					"Packages/google-Blaze/Blaze.sublime-build",
+					"Test custom target"
+				],
+				[
+					"Packages/google-Blaze/Tricorder.sublime-build",
+					""
+				],
+				[
+					"Packages/google-Blaze/Tricorder.sublime-build",
+					"Fix"
+				],
+				[
+					"Packages/User/blaze_from_mac.sublime-build",
+					""
+				],
+				[
+					"Packages/User/blaze_from_mac.sublime-build",
+					"unittests"
+				],
+				[
+					"Packages/User/blaze_from_mac.sublime-build",
+					"lint"
+				],
+				[
+					"Packages/User/blaze_from_mac.sublime-build",
+					"deploy"
+				],
+				[
+					"Packages/User/clang-tidy.sublime-build",
+					""
+				]
+			],
+			[
+				"Build",
+				""
+			]
+		],
+		[
+			[
+				[
+					"Packages/google-Blaze/Blaze.sublime-build",
+					""
+				],
+				[
+					"Packages/google-Blaze/Blaze.sublime-build",
+					"Run Tests"
+				],
+				[
+					"Packages/google-Blaze/Blaze.sublime-build",
+					"Run Modified Tests"
+				],
+				[
+					"Packages/google-Blaze/Blaze.sublime-build",
+					"Test custom target"
+				],
+				[
+					"Packages/google-C++/C++.sublime-build",
+					""
+				],
+				[
+					"Packages/google-C++/C++.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/blaze_from_mac.sublime-build",
+					""
+				],
+				[
+					"Packages/User/blaze_from_mac.sublime-build",
+					"unittests"
+				],
+				[
+					"Packages/User/blaze_from_mac.sublime-build",
+					"lint"
+				],
+				[
+					"Packages/User/blaze_from_mac.sublime-build",
+					"deploy"
+				],
+				[
+					"Packages/User/clang-tidy.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/google-Blaze/Blaze.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "edit",
+		"selected_items":
+		[
+			[
+				"edit",
+				"Edit Project"
+			],
+			[
+				"edit pro",
+				"Project Manager: Edit Project"
+			],
+			[
+				"orest",
+				"Origami: Restore Saved Layout"
+			],
+			[
+				"orierst",
+				"Origami: Restore Saved Layout"
+			],
+			[
+				"close",
+				"File: Close All"
+			],
+			[
+				"bui",
+				"Build With: Blaze"
+			],
+			[
+				"clang",
+				"Build With: clang-tidy"
+			],
+			[
+				"test",
+				"Build With: Blaze - Run Tests"
+			],
+			[
+				"save ",
+				"Origami: Save Current Layout"
+			],
+			[
+				"layou",
+				"Origami: Restore Saved Layout"
+			],
+			[
+				"closeall",
+				"File: Close All"
+			],
+			[
+				"bla",
+				"Build With: Blaze"
+			],
+			[
+				"blaze",
+				"Build With: Blaze"
+			],
+			[
+				"closea",
+				"File: Close All"
+			],
+			[
+				"blaze test",
+				"Build With: Blaze - Run Tests"
+			],
+			[
+				"orires",
+				"Origami: Restore Saved Layout"
+			],
+			[
+				"",
+				"Blaze: Run matching test"
+			],
+			[
+				"clsoe",
+				"File: Close All"
+			],
+			[
+				"blaze ",
+				"Build With: Blaze - Run Tests"
+			],
+			[
+				"cloa",
+				"File: Close All"
+			],
+			[
+				"book",
+				"Bookmarks: Toggle"
+			],
+			[
+				"bookm",
+				"Bookmarks: Toggle"
+			],
+			[
+				"blazetest",
+				"Build With: Blaze - Run Tests"
+			],
+			[
+				"filter",
+				"Filter Lines: Include lines with String"
+			],
+			[
+				"project",
+				"Project Manager: Open Project"
+			],
+			[
+				"proj",
+				"Project Manager"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"anf",
+				"ANF: New File"
+			],
+			[
+				"clo",
+				"File: Close All"
+			],
+			[
+				"edi",
+				"Edit Project"
+			],
+			[
+				"cloesal",
+				"File: Close All"
+			],
+			[
+				"close all",
+				"File: Close All"
+			],
+			[
+				"buildview",
+				"Disable/Enable buildview for this window"
+			],
+			[
+				"pakclist",
+				"Package Control: List Packages"
+			],
+			[
+				"dash",
+				"DashDoc: invoke Dash with selected word"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"filecl",
+				"File: Close All"
+			],
+			[
+				"cloe",
+				"File: Close All"
+			],
+			[
+				"edit ",
+				"Edit Project"
+			],
+			[
+				"edi ",
+				"Edit Project"
+			],
+			[
+				"fi",
+				"Filter Lines: Include lines with Regex"
+			],
+			[
+				"save",
+				"Origami: Save Current Layout"
+			],
+			[
+				"orisave",
+				"Origami: Save Current Layout"
+			],
+			[
+				"ori",
+				"Origami: Create Pane on the Left"
+			],
+			[
+				"orig",
+				"Origami: Create Pane with File Below"
+			],
+			[
+				"des",
+				"Origami: Destroy Pane Below"
+			],
+			[
+				"orcre",
+				"Origami: Create Pane Below"
+			],
+			[
+				"installp",
+				"Package Control: Install Package"
+			],
+			[
+				"graph",
+				"G4: Graphical Diff"
+			],
+			[
+				"installpak",
+				"Package Control: Install Package"
+			],
+			[
+				"diff",
+				"G4: Graphical Diff"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"enabbui",
+				"Disable/Enable buildview for this window"
+			],
+			[
+				"packinst",
+				"Package Control: Install Package"
+			],
+			[
+				"packlist",
+				"Package Control: List Packages"
+			],
+			[
+				"pakeinstal",
+				"Package Control: Install Package"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"citc",
+				"CitcHistory: Diff..."
+			],
+			[
+				"packegremo",
+				"Package Control: Remove Package"
+			],
+			[
+				"packetrm",
+				"Package Control: Remove Package"
+			],
+			[
+				"dif",
+				"G4: Graphical Diff File"
+			],
+			[
+				"g4 diff",
+				"G4: Diff File"
+			],
+			[
+				"edit proj",
+				"Project: Edit Project"
+			],
+			[
+				"clsoeall",
+				"File: Close All"
+			],
+			[
+				"g4",
+				"G4: List Opened Files"
+			],
+			[
+				"clos",
+				"File: Close All"
+			],
+			[
+				"word",
+				"Word Wrap: Toggle"
+			],
+			[
+				"gradiff",
+				"G4: Graphical Diff File"
+			],
+			[
+				"sets c",
+				"Set Syntax: C++"
+			],
+			[
+				"blazete",
+				"Set Syntax: BlazeTestLog"
+			],
+			[
+				"restart",
+				"YouCompleteSubl: Restart YCMD"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"youcom",
+				"YouCompleteSubl: Restart YCMD"
+			],
+			[
+				"packin",
+				"Package Control: Install Package"
+			],
+			[
+				"for",
+				"Format selection: auto"
+			],
+			[
+				"origa",
+				"Origami: Restore Saved Layout"
+			],
+			[
+				"pretty",
+				"Pretty JSON: Format (Pretty Print) JSON"
+			],
+			[
+				"g4dif",
+				"G4: Graphical Diff File"
+			],
+			[
+				"gra",
+				"G4: Graphical Diff File"
+			],
+			[
+				"listo",
+				"G4: List Opened Files"
+			],
+			[
+				"removepack",
+				"Package Control: Remove Package"
+			],
+			[
+				"g4 gra",
+				"G4: Graphical Diff File"
+			],
+			[
+				"packu",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"fold",
+				"Filter Lines: Fold With Regex"
+			],
+			[
+				"orgarest",
+				"Origami: Restore Saved Layout"
+			],
+			[
+				"form",
+				"Format: auto"
+			],
+			[
+				"b",
+				"Build With: Blaze"
+			],
+			[
+				"fora",
+				"Format: auto"
+			],
+			[
+				"forma",
+				"Format selection: auto"
+			],
+			[
+				"format",
+				"Format selection: auto"
+			],
+			[
+				"auto",
+				"Format: auto"
+			],
+			[
+				"forat",
+				"Format: auto"
+			],
+			[
+				"bl",
+				"Build With: Blaze"
+			],
+			[
+				"blaz",
+				"Build With: Blaze"
+			],
+			[
+				"origami",
+				"Origami: Destroy Current Pane"
+			],
+			[
+				"build",
+				"Build With: LaTeX - Basic Builder - LuaLaTeX"
+			],
+			[
+				"buil",
+				"Build With: LaTeX - PdfLaTeX"
+			],
+			[
+				"unfol",
+				"Code Folding: Unfold All"
+			],
+			[
+				"latext",
+				"Build With: LaTeX - Traditional"
+			],
+			[
+				"fol",
+				"Filter Lines: Fold With Regex"
+			],
+			[
+				"pakc",
+				"Package Control: Install Package"
+			],
+			[
+				"edit project",
+				"Project: Edit Project"
+			],
+			[
+				"pakcin",
+				"Package Control: Install Package"
+			],
+			[
+				"rest",
+				"Origami: Restore Saved Layout"
+			],
+			[
+				"orisa",
+				"Origami: Save Current Layout"
+			],
+			[
+				"restore",
+				"Origami: Restore Saved Layout"
+			],
+			[
+				"oripan",
+				"Origami: Create Pane on the Right"
+			],
+			[
+				"destrp",
+				"Origami: Destroy Current Pane"
+			],
+			[
+				"destr pane",
+				"Origami: Destroy Pane Above"
+			],
+			[
+				"unzoom",
+				"Origami: Unzoom Current Pane"
+			],
+			[
+				"or",
+				"Origami: Zoom Current Pane"
+			],
+			[
+				"packain",
+				"Package Control: Install Package"
+			],
+			[
+				"cs",
+				"Google CS: Search"
+			],
+			[
+				"pacin",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"mater",
+				"Material Theme: Activate theme"
+			],
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"box",
+				"Boxy Theme: Activation"
+			],
+			[
+				"package ",
+				"Package Control: Install Package"
+			],
+			[
+				"g4l",
+				"G4: List Opened Files"
+			],
+			[
+				"run",
+				"Blaze: Run matching test"
+			],
+			[
+				"set sy",
+				"Set Syntax: C++"
+			],
+			[
+				"fix",
+				"G4: Fix File"
+			],
+			[
+				"gdb",
+				"SublimeGDB: Open Breakpoint View"
+			],
+			[
+				"lower",
+				"Convert Case: Lower Case"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 652.0
+	},
+	"console":
+	{
+		"height": 379.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/liamog/udacity/CarND-MPC-Project/MPC.cpp",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/ijp/BUILD",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/ijp/node.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/simulator/simulator.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/ijp/test_setup.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/ijp/node.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/ijp/searcher.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/ijp/proximity_checker.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/ijp/cost_features.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/ijp/cost_features.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/roadgraph/polyline_codec.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/ijp/searcher.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/gui_utils/debug_variables/debug_proto_formatter.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/gui_utils/debug_variables/debug_variables_adapter.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/ijp/cost_features_test.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/blaze-out/k8-opt/bin/_solib_k8/libthird_Uparty_Scar_Sonboard_Splanner_Sijp_Slibnode.ifso",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/object_manager.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/object_manager.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/path_constraints/turn_shift.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/path_constraints/BUILD",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_debug_util.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_debug_util.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/BUILD",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/ijp/searcher_test.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/simulator/tools/simutil.cc",
+		"/Users/liamog/Library/Application Support/Sublime Text 3/Packages/User/GoogleBlaze.sublime-settings",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/roadgraph/polyline_codec.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/passing/passing.proto",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/ijp/stateful_maneuver_builder.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/testdata/narrow-cul-de-sac.rg.clf",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_strategy.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_module.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_state.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_state.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/simulator/BUILD",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/strategy/planner_task.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_base.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_onboard_module.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_onboard_module.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/path_constraints/trajectory_generator.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/forward_planner_test.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/strategy/planner_task_set.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/strategy/planner_task_set.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_module_test.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/remote_assistance/stuck_monitor_test.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/strategy/planner_selector.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/strategy/planner_selector.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/strategy/BUILD",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/ijp/scheduler.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/maneuver/maneuver_planner.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_module.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/forward_planner.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_world.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/remote_assistance/stuck_monitor.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/remote_assistance/stuck_monitor.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/remote_assistance/BUILD",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/test_util/planner_test_setup.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/strategy/planner_task.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_strategy.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_output.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/maneuver/BUILD",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/test_util/BUILD",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_util.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/forward_planner.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_output.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/absl/memory/memory.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/sfc_fallback/sfc_module.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/sfc_fallback/BUILD",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/sfc_fallback/sfc_module.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_world.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/java/com/google/android/apps/car/uxc/jni/egoview/state/trajectory_utils.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/traj_util.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/traj_util.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_params.proto",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/param/common/planner_params.txt",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/passing/passing.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/grte/v4_x86/release/usr/grte/v4/include/sys/stat.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/path_optimizer/clothoid_trajectory_optimizer.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/trajectory/trajectory_mutators.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/trajectory/trajectory_mutators.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/path_optimizer/clothoid_trajectory_optimizer.cc",
+		"/tmp/blaze-compile-command-liamog/93c0aad9c370ca2cbbd8c34e09e6e6a33a0125f8f2bcef24beb1fd932c4f0293/execroot/google3/third_party/car/onboard/planner/planner_strategy.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/third_party/absl/memory/memory.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/path_optimizer/BUILD",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/x_view/augment_trajectory_generator.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/planner_integration_test.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/trajectory/trajectory_base.cc",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/freespace_optimizer/path_output.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/gtest/include/gtest/internal/gtest-internal.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/gtest/include/gtest/gtest.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/absl/base/optimization.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/onboard/planner/trajectory_info.h",
+		"/google/src/cloud/liamog/mpf_fig/google3/third_party/car/simulator/webview/webview_plugin.proto",
+		"/Users/liamog/bin/remount_remote",
+		"/Users/liamog/xpra.sh",
+		"/Users/liamog/.ssh/config",
+		"/Users/liamog/bin/remount",
+		"/Users/liamog/bin/mount-sshfs",
+		"/Users/liamog/xpra_cloudtop.sh",
+		"/Users/liamog/xpra_home.sh",
+		"/Users/liamog/xpra_remote2.sh",
+		"/Users/liamog/xpra_remote.sh",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/x_view/plugin_variables.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/x_view/plugin_planner.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/x_view/plugin_behavior_prediction.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/x_view/plugin_behavior_prediction.h",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/gui_utils/debug_variables/debug_variables_adapter_test.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/gui_utils/debug_variables/BUILD",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/gui_utils/debug_variables/debug_variables.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/gui_utils/debug_variables/debug_variables.h",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/gui_utils/debug_variables/debug_variables_adapter.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/x_view/plugin_variables_test.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/x_view/plugin_variables.h",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/gui_utils/debug_variables/debug_variables_filter.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/absl/strings/str_cat.h",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/gui_utils/debug_variables/debug_variables_filter_test.cc",
+		"/google/src/cloud/liamog/xview/google3/blaze-out/k8-fastbuild/bin/_solib_k8/libthird_Uparty_Scar_Sgui_Uutils_Sdebug_Uvariables_Slibdebug_Uvariables.ifso",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/gui_utils/debug_variables/debug_variables_test.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/gui_utils/debug_variables/debug_formatters/shaper_shift_debug_formatter.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/gui_utils/debug_variables/debug_formatters/shaper_shift_debug_formatter_test.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/gui_utils/debug_variables/debug_formatters/BUILD",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/x_view/BUILD",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/x_view/ijp_variables_model.h",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/x_view/ijp_variables_model.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/onboard/planner/path_constraints/shaper_right_turn_shift_test.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/x_view/plugin_perception.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/x_view/perception_object_info_window.cc",
+		"/google/src/cloud/liamog/xview/google3/third_party/car/x_view/plugin_planner.h"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 344.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Build",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"pid.h",
+				"src/PID.h"
+			],
+			[
+				"searh",
+				"planner/ijp/searcher.cc"
+			],
+			[
+				"simul",
+				"simulator/simulator.cc"
+			],
+			[
+				"cost_feat",
+				"planner/ijp/cost_features.cc"
+			],
+			[
+				"sear",
+				"planner/ijp/searcher.cc"
+			],
+			[
+				"test_set",
+				"planner/ijp/test_setup.cc"
+			],
+			[
+				"node.h",
+				"planner/ijp/node.h"
+			],
+			[
+				"node.cc",
+				"roadgraph/polyline_codec.cc"
+			],
+			[
+				"searcher",
+				"planner/ijp/searcher.cc"
+			],
+			[
+				"node",
+				"planner/ijp/node.cc"
+			],
+			[
+				"simulat",
+				"simulator/simulator.cc"
+			],
+			[
+				"proxi",
+				"planner/ijp/proximity_checker.cc"
+			],
+			[
+				"cost",
+				"planner/ijp/cost_features.cc"
+			],
+			[
+				"searcer",
+				"planner/ijp/searcher.cc"
+			],
+			[
+				"debug_varlad",
+				"gui_utils/debug_variables/debug_variables_adapter.cc"
+			],
+			[
+				"cost_",
+				"planner/ijp/cost_features.h"
+			],
+			[
+				"cost_f",
+				"planner/ijp/cost_features_test.cc"
+			],
+			[
+				"nod",
+				"planner/ijp/node.cc"
+			],
+			[
+				"nodec",
+				"planner/ijp/node.cc"
+			],
+			[
+				"ijp/build",
+				"planner/ijp/BUILD"
+			],
+			[
+				"proximity_",
+				"planner/ijp/proximity_checker.cc"
+			],
+			[
+				"searc",
+				"planner/ijp/searcher.cc"
+			],
+			[
+				"object",
+				"planner/object_manager.h"
+			],
+			[
+				"node.c",
+				"planner/ijp/node.cc"
+			],
+			[
+				"object_mana",
+				"planner/object_manager.h"
+			],
+			[
+				"object_m",
+				"planner/object_manager.h"
+			],
+			[
+				"turn_shif",
+				"planner/path_constraints/turn_shift.cc"
+			],
+			[
+				"planner_de",
+				"planner/planner_debug_util.h"
+			],
+			[
+				"objectman",
+				"planner/object_manager.h"
+			],
+			[
+				"cost_features_test",
+				"planner/ijp/cost_features_test.cc"
+			],
+			[
+				"searcher_test",
+				"planner/ijp/searcher_test.cc"
+			],
+			[
+				"test_setup",
+				"planner/ijp/test_setup.cc"
+			],
+			[
+				"debug_",
+				"gui_utils/debug_variables/debug_variables_adapter.cc"
+			],
+			[
+				"simut",
+				"simulator/tools/simutil.cc"
+			],
+			[
+				"test_setup.cc",
+				"planner/ijp/test_setup.cc"
+			],
+			[
+				"searcher.",
+				"planner/ijp/searcher.cc"
+			],
+			[
+				"passing.proto",
+				"planner/passing/passing.proto"
+			],
+			[
+				"node.g",
+				"planner/testdata/narrow-cul-de-sac.rg.clf"
+			],
+			[
+				"searcher.cc",
+				"planner/ijp/searcher.cc"
+			],
+			[
+				"planner_state",
+				"planner/planner_state.cc"
+			],
+			[
+				"planner_st",
+				"planner/planner_strategy.cc"
+			],
+			[
+				"planner_mode",
+				"planner/planner_module.cc"
+			],
+			[
+				"simu",
+				"simulator/simulator.cc"
+			],
+			[
+				"trajgene",
+				"planner/path_constraints/trajectory_generator.cc"
+			],
+			[
+				"planner_onboad",
+				"planner/planner_onboard_module.cc"
+			],
+			[
+				"planner",
+				"planner/planner_strategy.cc"
+			],
+			[
+				"planner_m",
+				"planner/planner_module.cc"
+			],
+			[
+				"planner_se",
+				"planner/strategy/planner_selector.cc"
+			],
+			[
+				"planner_selec",
+				"planner/strategy/planner_selector.cc"
+			],
+			[
+				"planner_s",
+				"planner/planner_strategy.cc"
+			],
+			[
+				"planner_mod",
+				"planner/planner_module.cc"
+			],
+			[
+				"planneronb",
+				"planner/planner_onboard_module.cc"
+			],
+			[
+				"plannertask",
+				"planner/strategy/planner_task_set.cc"
+			],
+			[
+				"plannerbase",
+				"planner/planner_base.h"
+			],
+			[
+				"planner_task",
+				"planner/strategy/planner_task.h"
+			],
+			[
+				"planner_sec",
+				"planner/strategy/planner_selector.cc"
+			],
+			[
+				"maneuverp",
+				"planner/maneuver/maneuver_planner.cc"
+			],
+			[
+				"ptrajecgen",
+				"planner/path_constraints/trajectory_generator.cc"
+			],
+			[
+				"planner_md",
+				"planner/planner_module.cc"
+			],
+			[
+				"trajectory_gener",
+				"planner/path_constraints/trajectory_generator.cc"
+			],
+			[
+				"lanner",
+				"planner/planner_strategy.cc"
+			],
+			[
+				"planner_onbl",
+				"planner/planner_onboard_module.cc"
+			],
+			[
+				"planner_onb",
+				"planner/planner_onboard_module.cc"
+			],
+			[
+				"scheduler",
+				"planner/ijp/scheduler.cc"
+			],
+			[
+				"planeronb",
+				"planner/planner_onboard_module.h"
+			],
+			[
+				"stuck_moniot",
+				"planner/remote_assistance/stuck_monitor_test.cc"
+			],
+			[
+				"planer_mode",
+				"planner/planner_module_test.cc"
+			],
+			[
+				"planner_stra",
+				"planner/planner_strategy.cc"
+			],
+			[
+				"trajectorg",
+				"planner/path_constraints/trajectory_generator.cc"
+			],
+			[
+				"forward_plan",
+				"planner/forward_planner_test.cc"
+			],
+			[
+				"stuck",
+				"planner/remote_assistance/stuck_monitor.h"
+			],
+			[
+				"maneupla",
+				"planner/maneuver/maneuver_planner.cc"
+			],
+			[
+				"planner_wor",
+				"planner/planner_world.h"
+			],
+			[
+				"planner_str",
+				"planner/planner_strategy.cc"
+			],
+			[
+				"planner_",
+				"planner/planner_world.h"
+			],
+			[
+				"fowardplanner",
+				"planner/forward_planner_test.cc"
+			],
+			[
+				"traecgen",
+				"planner/path_constraints/trajectory_generator.cc"
+			],
+			[
+				"planner_stat",
+				"planner/planner_strategy.cc"
+			],
+			[
+				"traject",
+				"planner/path_constraints/trajectory_generator.cc"
+			],
+			[
+				"planner_tas",
+				"planner/strategy/planner_task.cc"
+			],
+			[
+				"forware",
+				"planner/forward_planner_test.cc"
+			],
+			[
+				"planner_test_set",
+				"planner/test_util/planner_test_setup.cc"
+			],
+			[
+				"plannermodul",
+				"planner/planner_module.cc"
+			],
+			[
+				"planner_out",
+				"planner/planner_output.h"
+			],
+			[
+				"planner_on",
+				"planner/planner_onboard_module.cc"
+			],
+			[
+				"trajecgen",
+				"planner/path_constraints/trajectory_generator.cc"
+			],
+			[
+				"sim",
+				"simulator/simulator.cc"
+			],
+			[
+				"plannerwor",
+				"planner/planner_world.h"
+			],
+			[
+				"plannerst",
+				"planner/planner_strategy.h"
+			],
+			[
+				"planner_world",
+				"planner/planner_world.h"
+			],
+			[
+				"sfc_module",
+				"planner/sfc_fallback/sfc_module.cc"
+			],
+			[
+				"sfc_mo",
+				"planner/sfc_fallback/sfc_module.cc"
+			],
+			[
+				"sfc_mode",
+				"planner/sfc_fallback/sfc_module.cc"
+			],
+			[
+				"sfc_mod",
+				"planner/sfc_fallback/sfc_module.cc"
+			],
+			[
+				"plannwor",
+				"planner/planner_world.h"
+			],
+			[
+				"plannerwr",
+				"planner/planner_world.h"
+			],
+			[
+				"planner_wo",
+				"planner/planner_world.h"
+			],
+			[
+				"manplann",
+				"planner/maneuver/maneuver_planner.cc"
+			],
+			[
+				"taskset",
+				"planner/strategy/planner_task_set.cc"
+			],
+			[
+				"planner_mo",
+				"planner/planner_module.cc"
+			],
+			[
+				"planner_util",
+				"planner/planner_util.cc"
+			],
+			[
+				"forward",
+				"planner/forward_planner.cc"
+			],
+			[
+				"plannermode",
+				"planner/planner_onboard_module.cc"
+			],
+			[
+				"lanner_onboard",
+				"planner/planner_onboard_module.h"
+			],
+			[
+				"planmode",
+				"planner/planner_onboard_module.h"
+			],
+			[
+				"planneron",
+				"planner/planner_onboard_module.h"
+			],
+			[
+				"planner_base",
+				"planner/planner_base.h"
+			],
+			[
+				"forward_",
+				"planner/forward_planner.cc"
+			],
+			[
+				"planner_output",
+				"planner/planner_output.cc"
+			],
+			[
+				"passi",
+				"planner/passing/passing.cc"
+			],
+			[
+				"pass",
+				"planner/passing/passing.cc"
+			],
+			[
+				"passin",
+				"planner/passing/passing.cc"
+			],
+			[
+				"passing",
+				"planner/passing/passing.cc"
+			],
+			[
+				"trajecge",
+				"planner/path_constraints/trajectory_generator.cc"
+			],
+			[
+				"sfc_modul",
+				"planner/sfc_fallback/sfc_module.cc"
+			],
+			[
+				"traject_muta",
+				"planner/trajectory/trajectory_mutators.h"
+			],
+			[
+				"simulator",
+				"simulator/simulator.cc"
+			],
+			[
+				"planner_para",
+				"params/common/planner_params.txt"
+			],
+			[
+				"trajuti",
+				"planner/traj_util.cc"
+			],
+			[
+				"trajectory_util",
+				"android_apps_car/uxc/jni/egoview/state/trajectory_utils.h"
+			],
+			[
+				"planner_straty",
+				"planner/planner_strategy.cc"
+			],
+			[
+				"cloth",
+				"planner/path_optimizer/clothoid_trajectory_optimizer.h"
+			],
+			[
+				"trajector",
+				"planner/path_constraints/trajectory_generator.cc"
+			],
+			[
+				"trajectge",
+				"planner/path_constraints/trajectory_generator.cc"
+			],
+			[
+				"trajecogee",
+				"planner/path_constraints/trajectory_generator.cc"
+			],
+			[
+				"clothoidop",
+				"planner/path_optimizer/clothoid_trajectory_optimizer.cc"
+			],
+			[
+				"trajectory_gen",
+				"x_view/augment_trajectory_generator.cc"
+			],
+			[
+				"search",
+				"planner/ijp/searcher.cc"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/google/src/cloud/liamog/sublime_projects/google3/experimental/users/liamog/sublimeprojects/passing_react_to_futher_away.sublime-project"
+			],
+			[
+				"pal",
+				"/google/src/cloud/liamog/sublime_projects/google3/experimental/users/liamog/sublimeprojects/planner.sublime-project"
+			],
+			[
+				"planner",
+				"/google/src/cloud/liamog/sublime_projects/google3/experimental/users/liamog/sublimeprojects/planner.sublime-project"
+			],
+			[
+				"plann",
+				"/google/src/cloud/liamog/sublime_projects/google3/experimental/users/liamog/sublimeprojects/planner.sublime-project"
+			],
+			[
+				"pla",
+				"/google/src/cloud/liamog/sublime_projects/google3/experimental/users/liamog/sublimeprojects/planner.sublime-project"
+			],
+			[
+				"plan",
+				"/google/src/cloud/liamog/sublime_projects/google3/experimental/users/liamog/sublimeprojects/planner.sublime-project"
+			],
+			[
+				"twea",
+				"/google/src/cloud/liamog/sublime_projects/google3/experimental/users/liamog/sublimeprojects/tweaker_acc_uncertainty.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 229.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

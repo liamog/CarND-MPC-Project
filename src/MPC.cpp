@@ -7,7 +7,7 @@ using CppAD::AD;
 
 // TODO: Set the timestep length and duration
 size_t N = 10;
-double dt = 0.1;
+double dt = 0.05;
 
 // This value assumes the model presented in the classroom is used.
 //
@@ -155,6 +155,11 @@ class FG_eval {
 //
 MPC::MPC() {}
 MPC::~MPC() {}
+std::string MPC::LogFileName() {
+  std::stringstream file_name;
+  file_name << N << "_" << dt << "_cte.csv";
+  return file_name.str();
+}
 
 vector<double> MPC::Solve(Eigen::VectorXd x0, Eigen::VectorXd coeffs) {
   typedef CPPAD_TESTVECTOR(double) Dvector;

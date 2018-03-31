@@ -5,3 +5,11 @@ tags
 .DS_Store
 cmake-build-debug/*
 .idea/*
+
+mpc/mpc.xcodeproj/**
+
+mpc/mpc.xcodeproj/project.xcworkspace/contents.xcworkspacedata
+
+mpc/mpc.xcodeproj/project.xcworkspace/xcuserdata/liamog.xcuserdatad/UserInterfaceState.xcuserstate
+
+mpc/mpc.xcodeproj/project.xcworkspace/xcuserdata/liamog.xcuserdatad/UserInterfaceState.xcuserstate

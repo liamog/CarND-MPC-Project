@@ -1,9 +1,11 @@
 #include <math.h>
 #include <uWS/uWS.h>
 #include <chrono>
+#include <fstream>
 #include <iostream>
 #include <thread>
 #include <vector>
+
 #include "Eigen-3.3/Eigen/Core"
 #include "Eigen-3.3/Eigen/QR"
 #include "MPC.h"
@@ -80,12 +82,21 @@ Eigen::VectorXd polyfit(Eigen::VectorXd xvals, Eigen::VectorXd yvals,
 
 int main() {
   uWS::Hub h;
-
   // MPC is initialized here!
   MPC mpc;
 
-  h.onMessage([&mpc](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length,
-                     uWS::OpCode opCode) {
+  int count = 0;
+
+  std::fstream cte_log;
+  cte_log.open(mpc.LogFileName().c_str(),
+               std::fstream::out | std::fstream::trunc | std::ios::binary);
+  cte_log.setf(std::ios_base::fixed);
+  cte_log << "count, steering_angle, speed, cte" << std::endl;
+
+  h.onMessage([&count, &mpc, &cte_log](uWS::WebSocket<uWS::SERVER> ws,
+                                       char *data, size_t length,
+                                       uWS::OpCode opCode) {
+    count++;
     // "42" at the start of the message means there's a websocket message event.
     // The 4 signifies a websocket message
     // The 2 signifies a websocket event
@@ -105,7 +116,7 @@ int main() {
           double psi = j[1]["psi"];
           double v = j[1]["speed"];
           // Convert to m/s
-          v =  (v * 1609.34) / 3600;
+          v = (v * 1609.34) / 3600;
           double a = j[1]["throttle"];
           double steering_angle_rads = j[1]["steering_angle"];
           steering_angle_rads *= -1.0;
@@ -138,34 +149,35 @@ int main() {
           constexpr double kLatencySeconds = 0.1;
           constexpr double Lf = 2.67;
           double future_psi = v * (steering_angle_rads / Lf) * kLatencySeconds;
-          // Calculate the future state of the vehicle before running prediction.
-          double future_x = v * std::cos(future_psi / 2) * kLatencySeconds;
-          double future_y = v * std::sin(future_psi / 2) * kLatencySeconds;
+
+          // Calculate the future state of the vehicle before running
+          // prediction.
+          double future_x = v * std::cos(future_psi) * kLatencySeconds;
+          double future_y = v * std::sin(future_psi) * kLatencySeconds;
           double future_v = v + a * kLatencySeconds;
 
           double future_cte = polyeval(coeffs, future_x);
-          double future_etsi = future_psi - atan(coeffs[1] + 2 * future_x * coeffs[2] +
-                                          3 * coeffs[3] * pow(future_x, 2));
-          double cte = polyeval(coeffs, 0);
-          double etsi = -atan(coeffs[1]);
+          double future_etsi =
+              future_psi - atan(coeffs[1] + 2 * future_x * coeffs[2] +
+                                3 * coeffs[3] * pow(future_x, 2));
 
-          std::cout << "x=" << future_x
-              << ",y=" << future_y
-              << ",v=" << future_v
-              << ",psi=" << future_psi
-              << ",cte=" << future_cte
-              << ",etsi=" << future_etsi << std::endl;
+          std::cout << "future: x=" << future_x << ",y=" << future_y
+                    << ",v=" << future_v << ",psi=" << future_psi
+                    << ",cte=" << future_cte << ",etsi=" << future_etsi
+                    << std::endl;
 
-
-//          Eigen::VectorXd state(8);
-//          state << 0,0,0,v,cte,etsi,a,steering_angle_rads;
+          double cte_now = polyeval(coeffs, 0);
+          double etsi_now = -atan(coeffs[1]);
 
           Eigen::VectorXd future_state(8);
 
-          future_state << future_x, future_y, future_psi, future_v, cte, etsi, a,
-              steering_angle_rads;
+          future_state << future_x, future_y, future_psi, future_v, future_cte, future_etsi,
+              a, steering_angle_rads;
 
           vector<double> solution = mpc.Solve(future_state, coeffs);
+
+          cte_log << count << "," << steering_angle_rads << "," << v << ","
+                  << cte_now << std::endl;
 
           /*
            * Both steering and throttle are in between [-1, 1].
@@ -185,7 +197,7 @@ int main() {
 
           std::cout << "steering angle command rads(norm)=" << steer_value
                     << "(" << steer_value_norm << ")|"
-                    << "throttle="<< throttle_value << std::endl;
+                    << "throttle=" << throttle_value << std::endl;
 
           json msgJson;
           // NOTE: Remember to divide by deg2rad(25) before you send the
@@ -219,9 +231,6 @@ int main() {
           //
           // Feel free to play around with this value but should be to drive
           // around the track with 100ms latency.
-          //
-          // NOTE: REMEMBER TO SET THIS TO 100 MILLISECONDS BEFORE
-          // SUBMITTING.023
           this_thread::sleep_for(chrono::milliseconds(kLatencyMilliseconds));
           ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
         }

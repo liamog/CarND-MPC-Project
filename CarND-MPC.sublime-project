@@ -1,0 +1,16 @@
+{
+  "folders":
+  [
+    {
+      "path": "."
+    }
+  ],
+   "build_systems":
+    [
+        {
+            "name": "Make",
+            "cmd": [ "make", "-C", "${project_path:}/build" ],
+            "file_regex": "/([^/:]+):(\\d+):(\\d+): "
+        }
+    ],
+}
